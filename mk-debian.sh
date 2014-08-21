@@ -39,6 +39,7 @@ info "Building box to '${PACKAGE}'..."
 ./debian/vagrant-lxc-fixes.sh ${DISTRIBUTION} ${RELEASE} ${ARCH} ${CONTAINER}
 ./debian/install-extras.sh ${CONTAINER}
 ./common/prepare-vagrant-user.sh ${CONTAINER}
+./debian/fix-ssh.sh
 ./debian/clean.sh ${CONTAINER}
 ./common/package.sh ${CONTAINER} ${PACKAGE}
 
